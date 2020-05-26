@@ -1,1 +1,1 @@
-## Atoms Rendering
+## Example Rendering
