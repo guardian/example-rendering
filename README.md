@@ -34,6 +34,12 @@ yarn storybook
 
 also
 
+```
+yarn link // so you don't need to publish to test changes remotely
+```
+
+and then
+
 ```typescript
     "scripts": {
         "build": "microbundle --jsx React.createElement",
