@@ -1,7 +1,5 @@
 # Example Rendering
 
-There are already several \*-rendering repos designed to isolate areas of code to make sharing easier and maintenence simpler. See [here](https://docs.google.com/document/d/1Z1LPU5_9bqd2hiOTIWuZqkF9Ps-Hfk5qpffPOywR8ys/edit#heading=h.8pvgly6jt73r) for more information on this appraoch.
-
 This repo is an opinionated example of how code can be separated out into its own repo, published to Npm, and shared
 
 ## The opinions:
@@ -14,20 +12,11 @@ Jest
 Storybook
 \+ babel, eslint, prettier, husky
 
-## Usage
-
-To import an atom in your project use `yarn add @guardian/atoms-rendering` then
-
-```
-import { TheAtomYouWant } from '@guardian/atoms-rendering';
-
-<TheAtomYouWant someProp={localData.someProp} />
-```
-
 ## Running locally
 
+This repository is a Github template so you can [create a new one from it](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template). Then
+
 ```
-git clone https://github.com/guardian/atoms-rendering.git
 yarn
 yarn storybook
 ```
@@ -52,22 +41,12 @@ and then
     }
 ```
 
-### How do you add a new atom to this repo?
-
-Adding a new atom in `atoms-rendering` involves
-
-1. Adding the component, eg. MyComponent.tsx
-2. Adding stories, eg. MyComponent.stories.tsx
-3. Adding a line to `index.ts` to export the component
-4. Publishing a new version of the library to Npm (see below)
-
 ## Publishing
 
 Manual publishing steps:
 
 1. Ensure your changes are on master
-2. `yarn build`
-3. Create a branch, `yourname/v1.0.1`
+2. Ensure you have an [Npm account](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages) that is authorised for the Npm @guardian organisation
+3. `yarn build`
 4. `yarn publish` (enter new version number, eg. 1.0.1)
-5. Create a PR for the version
-6. Then, in the consuming project, update the version of `@guardian/atoms-rendering` installed to see the changes
+5. Then, in the consuming project, update the version of `@guardian/[YOUR_NAME]s` installed to see the changes
