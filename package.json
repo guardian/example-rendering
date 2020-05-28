@@ -1,9 +1,12 @@
 {
     "name": "@guardian/atoms-rendering",
     "source": "src/index.ts",
-    "main": "dist/app.js",
-    "module": "dist/app.module.js",
-    "unpkg": "dist/app.umd.js",
+    "main": "dist/index.js",
+    "module": "dist/index.module.js",
+    "files": [
+        "dist/**/*"
+    ],
+    "unpkg": "dist/index.umd.js",
     "scripts": {
         "build": "microbundle --jsx React.createElement",
         "dev": "microbundle watch --jsx React.createElement",
@@ -63,5 +66,6 @@
         "emotion": "^10.0.27",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
-    }
+    },
+    "version": "0.0.0"
 }
